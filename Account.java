@@ -1,36 +1,31 @@
-package bank;
-
-public abstract class Account 
+class Account
 {
-	private String accno;
-	private String name;
-	protected double balance;
+	private long id;
+	private double bal;
+	static float int_rate;
 	
-	public Account()
+	Account()
 	{
+		id=00;
+		bal=0.00;
+	
+	}
+	Account(long a,double b)
+	{
+		id=a;
+		bal=b;
 		
 	}
-	
-	
-	public Account(String accno, String name, double balance)
+
+	static 
 	{
+		int_rate=4.5f;
+	
+	}
+	
+	void show()
+	{
+		System.out.println("balance is "+int_rate*bal);
+	}
 		
-		this.accno = accno;
-		this.name = name;
-		this.balance = balance;
-	}
-	public  abstract void withdrawl(double amt);
-	
-	
-
-	
-
-	@Override
-	public String toString() {
-	return "Account no:" + accno + "\n Name:" + name + "\n Balance:" + balance ;
-	}
-	
-	
-	
-	
 }

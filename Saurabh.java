@@ -9,15 +9,9 @@ class Student
 		this.roll_no=roll_no;
 
 	}
-	public String toString()
-	{
-		return name+"\n"+roll_no;
-	}
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		Student s=new Student("dhananjay",42);
 		System.out.println(s);
-		//System.out.println(s.toString());
 	}
 }

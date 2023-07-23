@@ -1,34 +1,26 @@
-package bank;
-
-import java.util.Scanner;
-
-public class Bank 
+class Bank
 {
-	public static void main(String[] args) 
+	private long  accountnum;
+	private double balance;
+	
+	Bank()
 	{
-		Scanner sc = new Scanner(System.in);
-		
-	/*	
-		Saving s1;// object
-		System.out.println("Enter the account no:");
-		String acc= sc.nextLine();
-		System.out.println("Enter the name:");
-		String name= sc.nextLine();
-		System.out.println("Enter the balance");
-		double balance=sc.nextDouble();
-		s1=new  Saving(acc,name,balance);
-		System.out.println(s1);
-		s1.withdrawl(2000);
-		*/
-		
-		
-		
-		 Account a = new Saving("354651321","lsls",545313);
-		 System.out.println(a);
-		 Saving b= (Saving)a;
-		 System.out.println(b);
-		
-		
-	}
+		accountnum=0;
+		balance=0.0;
+	
 
+	}
+	Bank(long id,double bal)
+	{
+		accountnum=id;
+		balance=bal;
+	}
+	
+	void showinfo()
+	{
+		System.out.println("Account number is"+accountnum);
+		System.out.println("Balance  is"+balance);
+	}
+	
+		
 }
